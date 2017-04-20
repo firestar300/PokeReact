@@ -1,12 +1,13 @@
-# Boilerplate React App
+# PokeReact
 
-Simple ReactJS boilerplate with Webpack, Foundation and Karma.
+A Pokédex made with ReactJS and [PokéAPI](https://pokeapi.co/).
 
 ## Installation
 
-* Clone Git repository : `git clone git@github.com:firestar300/react-boilerplate.git`
-* Install node modules : `npm install`
+* Clone Git repository : `git clone git@github.com:firestar300/PokeReact.git`
+* Install node modules with NPM or Yarn : `npm install` or `yarn`
 
 ## Start local server
-* Start server : `npm run dev`
-* And go to `localhost:8080` into your browser.
+* Start server : `npm start`
+* Watch files with Webpack : `webpack -w`
+* And go to `localhost:3000` into your browser.
