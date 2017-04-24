@@ -7,7 +7,6 @@ var store = require('configureStore').configure();
 var PokeApp = require('PokeApp');
 var PokeAPI = require('PokeAPI');
 
-console.log(PokeAPI);
 PokeAPI.setAll();
 // store.subscribe(() => {
 //   PokeAPI.setAll();

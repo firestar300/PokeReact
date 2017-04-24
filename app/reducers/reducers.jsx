@@ -10,7 +10,8 @@ export var searchTextReducer = (state = '', action) => {
 export var pokemonReducer = (state = '', action) => {
   switch (action.type) {
     case 'DISPLAY_POKEMON':
-      return action.id
+      console.log(action);
+      return action.url
     default:
       return state;
   }

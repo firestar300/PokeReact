@@ -13,7 +13,7 @@ export var PokeSuggests = React.createClass({
           var key = pokemon.url.replace('http://pokeapi.co/api/v2/pokemon/', '').replace('/', '');
 
           return (
-            <PokeSuggestsItem key={key} {...pokemon} />
+            <PokeSuggestsItem key={pokemon.name} {...pokemon} />
           );
         });
       }

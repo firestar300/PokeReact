@@ -18,15 +18,17 @@ var self = module.exports = {
     return $.isArray(pokemons) ? pokemons : [];
   },
   setAll: () => {
-    return axios.get(REQUEST + '?limit=811').then(function(res) {
-      if($.isArray(res.data.results)) {
-        localStorage.setItem('pokemons', JSON.stringify(res.data.results));
+    if(!localStorage.getItem('pokemons')) {
+      return axios.get(REQUEST + '?limit=811').then(function(res) {
+        if($.isArray(res.data.results)) {
+          localStorage.setItem('pokemons', JSON.stringify(res.data.results));
 
-        return res.data.results;
-      }
-    }, function(err) {
-      throw new Error('Enable to fetch Pokémon datas.');
-    });
+          return res.data.results;
+        }
+      }, function(err) {
+        throw new Error('Enable to fetch Pokémon datas.');
+      });
+    }
   },
   suggest: (searchText) => {
     var filteredPkmns = self.getAll();

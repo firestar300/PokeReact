@@ -1,7 +1,9 @@
 var React = require('react');
+var {connect} = require('react-redux');
 
-var PokeView = React.createClass({
+export var PokeView = React.createClass({
   render: function() {
+    console.log(this.props);
     return (
       <div>
         PokeView
@@ -10,4 +12,4 @@ var PokeView = React.createClass({
   }
 });
 
-module.exports = PokeView;
+export default connect()(PokeView);

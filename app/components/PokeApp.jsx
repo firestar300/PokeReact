@@ -2,7 +2,7 @@ var React = require('react');
 
 import PokeSearch from 'PokeSearch';
 import PokeSuggests from 'PokeSuggests';
-var PokeView = require('PokeView');
+import PokeView from 'PokeView';
 
 var PokeApp = React.createClass({
   render: function() {

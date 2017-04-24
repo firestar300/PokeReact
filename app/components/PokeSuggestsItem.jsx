@@ -4,11 +4,16 @@ var actions = require('actions');
 
 export var PokeSuggestsItem = React.createClass({
   render: function() {
-    var {name, key, dispatch} = this.props;
+    var {name, url, dispatch} = this.props;
+    console.log(this.props)
 
     return (
       <div onClick={() => {
-        dispatch(actions.displayPokemon(key))
+        //console.log(url);
+
+        if(url !== undefined) {
+          dispatch(actions.displayPokemon(url))
+        }
       }}>
         {name.toUpperCase()}
       </div>
@@ -16,4 +21,11 @@ export var PokeSuggestsItem = React.createClass({
   }
 });
 
-export default connect()(PokeSuggestsItem);
+export default connect(
+  (state) => {
+    console.log(state);
+    return {
+      url: state.url
+    }
+  }
+)(PokeSuggestsItem);

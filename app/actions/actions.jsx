@@ -5,8 +5,9 @@ export var setSearchText = (searchText) => {
   };
 };
 
-export var displayPokemon = (id) => {
+export var displayPokemon = (url) => {
   return {
-    type: 'DISPLAY_POKEMON'
+    type: 'DISPLAY_POKEMON',
+    url
   }
 };
