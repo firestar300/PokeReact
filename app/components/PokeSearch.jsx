@@ -11,8 +11,7 @@ export var PokeSearch = React.createClass({
     return (
       <div>
         <input type="search" placeholder="Search a Pokémon" ref="searchText" onChange={() => {
-            //PokeAPI.suggest(this.refs.searchText.value);
-            var searchText = this.refs.searchText.value;
+            var searchText = this.refs.searchText.value.toLowerCase();
             dispatch(actions.setSearchText(searchText));
           }} />
       </div>
