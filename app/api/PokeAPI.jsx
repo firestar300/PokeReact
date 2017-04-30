@@ -34,12 +34,12 @@ var self = module.exports = {
     var filteredPkmns = self.getAll();
 
     // Filter by searchText
-    filteredPkmns = filteredPkmns.filter((pkmn) => {
+    filteredPkmns = filteredPkmns.filter(pkmn => {
       var pkmn = pkmn.name.toLowerCase();
 
-      return pkmn.indexOf(searchText) >= 0;
+      return pkmn.indexOf(searchText.toLowerCase()) >= 0;
     });
 
-    return filteredPkmns;
+    return searchText.length > 0 ? filteredPkmns : [];
   }
 }
